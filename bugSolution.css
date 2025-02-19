@@ -1,0 +1,11 @@
+/* Correct solution: Avoid using percentages and viewport units together in calc() */
+#element {
+  width: calc(50vw - 100px);
+}
+
+/* Alternative solution: use javascript to calculate the correct value*/
+<script>
+  const viewportWidth = window.innerWidth;
+  const element = document.getElementById('element');
+  element.style.width = `${0.5 * viewportWidth - 100}px`;
+</script>
